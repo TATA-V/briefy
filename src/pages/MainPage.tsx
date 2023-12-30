@@ -1,5 +1,7 @@
 import { ChangeEvent } from 'react'
-import { Button, Input, Interest } from '@ui'
+import {
+  Button, Input, Interest, ArticleCard,
+} from '@ui'
 import styled from 'styled-components'
 
 function MainPage() {
@@ -11,7 +13,17 @@ function MainPage() {
       <StyledDiv>
         test
       </StyledDiv>
-      <Interest title="비지니스" />
+      <ArticleCard
+        data={{
+          category: ['뉴닉', '경제'],
+          title: '이스라엘-팔레스타인 하마스 전쟁 (8) : 지상편과 휴전',
+          src: 'https://ifh.cc/g/t5Z7ol.jpg',
+          percent: '75%',
+        }}
+        mode="unread"
+        onClick={() => alert('클릭!')}
+      />
+      <Interest title="비지니스" onClick={(title: string) => alert(title)} />
       <Button
         onClick={() => alert('오!')}
         title="브리피로 구독하기"

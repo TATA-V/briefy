@@ -26,8 +26,8 @@ dependencies:
 
 devDependencies:
   '@tata-v/eslint-config-react':
-    specifier: ^1.0.12
-    version: 1.0.12(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)
+    specifier: ^1.0.13
+    version: 1.0.13(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)
   '@types/node':
     specifier: ^20.10.5
     version: 20.10.6
@@ -699,8 +699,8 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
 
-  /@tata-v/eslint-config-react@1.0.12(@typescript-eslint/parser@6.16.0)(eslint@8.56.0):
-    resolution: {integrity: sha512-BW2vJCNi6625OtIsESe0aFyCOVvPStZyuDG7Qdk2uz4/1Mex5pICRm8Jy09sSwHVLzP49NhLDeKCP4AD3wG3aw==}
+  /@tata-v/eslint-config-react@1.0.13(@typescript-eslint/parser@6.16.0)(eslint@8.56.0):
+    resolution: {integrity: sha512-tFk+bOLJTIh9Wd86RYiWOl3jveREASfxRKdP6XQNn5h22GU57wXc4jyM7m7wptTmQZqTeiD1DGLGeB4uk+Gh7g==}
     dependencies:
       eslint-config-airbnb: 19.0.4(eslint-plugin-import@2.29.1)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@8.56.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)
