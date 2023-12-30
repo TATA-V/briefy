@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
-import { Button, Input } from '@ui'
-import Interest from 'src/components/common/Interest'
+import { Button, Input, Interest } from '@ui'
+import styled from 'styled-components'
 
 function MainPage() {
   return (
@@ -8,7 +8,10 @@ function MainPage() {
       <h1 className="text-3xl text-primary font-[600] underline">
         Hello world!
       </h1>
-      <Interest />
+      <StyledDiv>
+        test
+      </StyledDiv>
+      <Interest title="비지니스" />
       <Button
         onClick={() => alert('오!')}
         title="브리피로 구독하기"
@@ -27,3 +30,7 @@ function MainPage() {
 }
 
 export default MainPage
+
+const StyledDiv = styled.div`
+  color: red;
+`

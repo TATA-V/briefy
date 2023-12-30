@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import './style/global.css'
 
 import MainPage from './pages/MainPage'
 

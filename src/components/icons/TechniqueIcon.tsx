@@ -2,7 +2,8 @@ function TechniqueIcon() {
   return (
     <svg
       fill="none"
-      viewBox="0 0 100 100"
+      width="100%"
+      height="100%"
     >
       <path
         fill="currentColor"
