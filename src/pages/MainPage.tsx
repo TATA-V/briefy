@@ -1,6 +1,5 @@
 import { ChangeEvent } from 'react'
 import { Button, Input } from '@ui'
-import styled from 'styled-components'
 import Interest from 'src/components/common/Interest'
 
 function MainPage() {
@@ -9,9 +8,6 @@ function MainPage() {
       <h1 className="text-3xl text-primary font-[600] underline">
         Hello world!
       </h1>
-      <StyledDiv>
-        test
-      </StyledDiv>
       <Interest />
       <Button
         onClick={() => alert('오!')}
@@ -31,7 +27,3 @@ function MainPage() {
 }
 
 export default MainPage
-
-const StyledDiv = styled.div`
-  color: red;
-`
