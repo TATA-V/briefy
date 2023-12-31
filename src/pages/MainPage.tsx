@@ -1,8 +1,8 @@
 import { ChangeEvent } from 'react'
+import styled from 'styled-components'
 import {
   Button, Input, Interest, ArticleCard, NewsLetterCard,
-} from '@ui'
-import styled from 'styled-components'
+} from 'briefy-storybook'
 
 function MainPage() {
   return (

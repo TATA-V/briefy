@@ -55,6 +55,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.16
     version: 10.4.16(postcss@8.4.32)
+  briefy-storybook:
+    specifier: ^1.0.0
+    version: 1.0.0
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -1206,6 +1209,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       fill-range: 7.0.1
+    dev: true
+
+  /briefy-storybook@1.0.0:
+    resolution: {integrity: sha512-AeAx/6AYmKwMAMdtmCPjbqFXioLGVYvfObQ1l4fTux/FOIRy1pKNWgMiMFUeoro29UBPBQhuC8v3OuE6mf10yg==}
     dev: true
 
   /browserslist@4.22.2:
