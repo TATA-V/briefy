@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
 import {
-  Button, Input, Interest, ArticleCard,
+  Button, Input, Interest, ArticleCard, NewsLetterCard,
 } from '@ui'
 import styled from 'styled-components'
 
@@ -13,6 +13,12 @@ function MainPage() {
       <StyledDiv>
         test
       </StyledDiv>
+      <NewsLetterCard
+        title="뉴닉"
+        category="경제"
+        description="시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요"
+        onClick={() => alert('뉴스레터')}
+      />
       <ArticleCard
         data={{
           category: ['뉴닉', '경제'],
