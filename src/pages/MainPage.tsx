@@ -2,7 +2,7 @@ import { ChangeEvent } from 'react'
 import styled from 'styled-components'
 import {
   Button, Input, Interest, ArticleCard, NewsLetterCard,
-} from 'briefy-storybook'
+} from 'briefy-design'
 
 function MainPage() {
   return (

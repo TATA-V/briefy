@@ -31,7 +31,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "app": "^0.1.0",
     "autoprefixer": "^10.4.16",
-    "briefy-storybook": "^1.0.0",
+    "briefy-design": "^1.0.2",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react-refresh": "^0.4.5",
