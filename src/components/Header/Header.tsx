@@ -1,23 +1,31 @@
 import { NavLink } from 'react-router-dom';
 import Logo from 'src/components/icons/Logo';
-import SearchIcon from 'src/components/icons/SearchIcon';
+import { useWindowSize } from '@reactuses/core';
+import { useState } from 'react';
+
 import User from 'src/components/Header/User';
+import Search from 'src/components/Header/Search';
 
 function Header() {
+  const [showSearch, setShowSearch] = useState(false);
+  const { width } = useWindowSize();
+
   return (
     <>
       <header className="w-full h-[120px] flex justify-between items-center">
-        <div className="w-[75px] h-[22px]" />
+        {!showSearch && (
+          <>
+            {width > 767 && <div className="w-[75px] h-[22px]" />}
 
-        <NavLink to="/" className="w-[112px] h-[35px] text-primary">
-          <Logo />
-        </NavLink>
+            <NavLink to="/">
+              <Logo />
+            </NavLink>
+          </>
+        )}
 
-        <div className="flex justify-between items-center w-[75px] h-[22px]">
-          <User />
-          <div className="cursor-pointer w-[21.52px] h-[21.52px] text-balck900">
-            <SearchIcon />
-          </div>
+        <div className={`flex items-center h-[22px] ${showSearch ? 'w-full' : 'w-[75px] justify-between'}`}>
+          {!showSearch && <User />}
+          <Search showSearch={showSearch} setShowSearch={setShowSearch} />
         </div>
       </header>
     </>

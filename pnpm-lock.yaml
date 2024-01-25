@@ -7,6 +7,7 @@ specifiers:
   '@nextui-org/modal': ^2.0.28
   '@nextui-org/system': ^2.0.15
   '@nextui-org/theme': ^2.1.17
+  '@reactuses/core': ^4.0.13
   '@tata-v/eslint-config-react': ^1.0.22
   '@types/node': ^20.10.5
   '@types/react': ^18.2.46
@@ -43,6 +44,7 @@ dependencies:
   '@nextui-org/modal': 2.0.28_tflhpk3gqlkipz2bdiypgeesii
   '@nextui-org/system': 2.0.15_dknucdtmvthtbcpowyrb64dvsi
   '@nextui-org/theme': 2.1.17_tailwindcss@3.4.1
+  '@reactuses/core': 4.0.13_react@18.2.0
   '@types/react-router-dom': 5.3.3
   eslint-config-airbnb: 19.0.4_5xixws3m7nk6vkx7keji2g5lme
   framer-motion: 11.0.3_biqbaboplfbrettd7655fr4n2y
@@ -879,6 +881,18 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /@reactuses/core/4.0.13_react@18.2.0:
+    resolution: {integrity: sha512-80F8GKO8q5+43WK9du0BrmBd1AVWA3m9hsFlWoeUWxaUazxF4zVJy52LOu1OeU2KMo+JrvTKQTEHFuhBWHjv6A==}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0 || ^18.0.0
+    dependencies:
+      js-cookie: 3.0.5
+      lodash-es: 4.17.21
+      react: 18.2.0
+      screenfull: 5.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /@remix-run/router/1.14.2:
@@ -2736,6 +2750,11 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
+  /js-cookie/3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
+    dev: false
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -2811,6 +2830,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash.foreach/4.5.0:
     resolution: {integrity: sha512-aEXTF4d+m05rVOAUG3z4vZZ4xVexLKZGF0lIxuHZ1Hplpk/3B6Z1+/ICICYRLm7c41Z2xiejbkCkJoTlypoXhQ==}
@@ -3473,6 +3496,11 @@ packages:
     dependencies:
       loose-envify: 1.4.0
 
+  /screenfull/5.2.0:
+    resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /semver/6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -3911,6 +3939,14 @@ packages:
       detect-node-es: 1.1.0
       react: 18.2.0
       tslib: 2.5.0
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:
