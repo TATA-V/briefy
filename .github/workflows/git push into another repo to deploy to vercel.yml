@@ -21,8 +21,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.AUTH_TOKEN }}
         with:
           source-directory: 'output'
-          destination-github-username: 'tata-v'
-          destination-repository-name: 'briefy'
+          destination-github-username: 'Briefy-News'
+          destination-repository-name: 'briefy-client'
           user-email: ${{ secrets.OFFICIAL_ACCOUNT_EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
