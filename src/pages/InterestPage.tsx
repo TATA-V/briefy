@@ -7,7 +7,7 @@ function InterestPage() {
   const isEmpty = selected.length === 0;
   const navigate = useNavigate();
 
-  const handleInterest = (title: string) => {
+  const handleClick = (title: string) => {
     const isSelected = selected.includes(title);
     if (isSelected) {
       const newSelected = selected.filter((item) => item !== title);
@@ -33,7 +33,7 @@ function InterestPage() {
 
       <div className="pt-[80px] pb-[108px] w-[728px] grid grid-cols-5 gap-8">
         {interestList.map((item, idx) => (
-          <Interest key={idx} title={item} onClick={(title: string) => handleInterest(title)} />
+          <Interest key={idx} title={item} onClick={(title: string) => handleClick(title)} />
         ))}
       </div>
 
