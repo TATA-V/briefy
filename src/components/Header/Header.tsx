@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from 'src/components/icons/Logo';
 import { useWindowSize } from '@reactuses/core';
 import { useState } from 'react';
@@ -9,6 +9,8 @@ import Search from 'src/components/Header/Search';
 function Header() {
   const [showSearch, setShowSearch] = useState(false);
   const { width } = useWindowSize();
+  const { pathname } = useLocation();
+  const isInterestPage = pathname === '/interest';
 
   return (
     <>
@@ -24,8 +26,8 @@ function Header() {
         )}
 
         <div className={`flex items-center h-[22px] ${showSearch ? 'w-full' : 'w-[75px] justify-between'}`}>
-          {!showSearch && <User />}
-          <Search showSearch={showSearch} setShowSearch={setShowSearch} />
+          {(!showSearch && !isInterestPage) && <User />}
+          {!isInterestPage && <Search showSearch={showSearch} setShowSearch={setShowSearch} />}
         </div>
       </header>
     </>
