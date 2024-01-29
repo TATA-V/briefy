@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import Logo from 'src/components/icons/Logo';
-import { useWindowSize } from '@reactuses/core';
+import Logo from 'src/assets/icons/Logo';
 import { useState } from 'react';
 
 import User from 'src/components/Header/User';
@@ -8,16 +7,15 @@ import Search from 'src/components/Header/Search';
 
 function Header() {
   const [showSearch, setShowSearch] = useState(false);
-  const { width } = useWindowSize();
   const { pathname } = useLocation();
   const isInterestPage = pathname === '/interest';
 
   return (
     <>
-      <header className="w-full h-[120px] flex justify-between items-center">
+      <header className="w-full h-[66px] sm:h-[120px] flex justify-between items-center">
         {!showSearch && (
           <>
-            {width > 767 && <div className="w-[75px] h-[22px]" />}
+            <div className="hidden md:block w-[75px] h-[22px]" />
 
             <NavLink to="/">
               <Logo />
