@@ -8,11 +8,11 @@ import DefaultSwiper from 'src/components/Swiper/DefaultSwiper';
 import TitleAndPrevNextbtn from 'src/components/Swiper/TitleAndPrevNextbtn';
 
 interface Props {
-  title: ReactNode;
+  title?: ReactNode;
+  num?: number;
 }
 
-function NewsLetterSwiper({ title } : Props) {
-  const num = 20;
+function NewsLetterSwiper({ title, num = 20 } : Props) {
   const [swiperData, setSwiperData] = useState<SwiperData>({ slidesPerView: 3, spaceBetween: 24, lastIdx: num - 3 });
   const [swiperIndex, setSwiperIndex] = useState(0);
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -41,7 +41,7 @@ function NewsLetterSwiper({ title } : Props) {
 
   return (
     <section>
-      <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />
+      {title && <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />}
 
       <div className="flex justify-center pt-[16px]">
         <div className="w-full">
@@ -49,7 +49,7 @@ function NewsLetterSwiper({ title } : Props) {
             {[...Array(num)].map((_, idx) => (
               <SwiperSlide key={`newsletter${idx}`}>
                 <NewsLetterCard
-                  title={`뉴닉 ${idx}`}
+                  title={`뉴닉 ${idx + 1}`}
                   category="경제"
                   description="시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요"
                   onClick={() => alert('뉴스레터')}

@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import useIsFoundPage from 'src/hook/useIsFoundPage';
 import 'src/style/global.css';
 
 import Header from 'src/components/Header/Header';
@@ -8,7 +9,9 @@ import InterestPage from 'src/pages/InterestPage';
 import CategoryPage from 'src/pages/CategoryPage';
 import NewsPage from 'src/pages/NewsPage';
 import NotFoundPage from 'src/pages/NotFoundPage';
-import useIsFoundPage from 'src/hook/useIsFoundPage';
+import SearchPage from 'src/pages/SearchPage';
+import SearchNewsLetterPage from 'src/pages/SearchNewsLetterPage';
+import SearchArticlePage from 'src/pages/SearchArticlePage';
 
 function App() {
   const isFoundPage = useIsFoundPage();
@@ -26,6 +29,9 @@ function App() {
         <Route path="/interest" element={<InterestPage />} />
         <Route path="/news" element={<NewsPage />}>
           <Route path="/news/:category" element={<CategoryPage />} />
+          <Route path="/news/search" element={<SearchPage />} />
+          <Route path="/news/search/newsletter" element={<SearchNewsLetterPage />} />
+          <Route path="/news/search/article" element={<SearchArticlePage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

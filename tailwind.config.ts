@@ -5,10 +5,14 @@ export default {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@nextui-org/theme/dist/components/modal.js',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
+      screens: {
+        'max-w500': { min: '0px', max: '500px' },
+        'min-w900-max-w1200': { min: '900px', max: '1200px' },
+      },
       colors: {
         primary: '#5569FF',
         secondary: '#EBEDFF',

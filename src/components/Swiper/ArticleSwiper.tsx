@@ -8,11 +8,11 @@ import { useWindowSize } from '@reactuses/core';
 import { SwiperData } from 'src/types/swiper';
 
 interface Props {
-  title: ReactNode;
+  title?: ReactNode;
+  num?: number;
 }
 
-function ArticleSwiper({ title } : Props) {
-  const num = 20;
+function ArticleSwiper({ title, num = 20 } : Props) {
   const [swiperData, setSwiperData] = useState<SwiperData>({ slidesPerView: 3, spaceBetween: 24, lastIdx: num - 3 });
   const [swiperIndex, setSwiperIndex] = useState(0);
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -44,8 +44,8 @@ function ArticleSwiper({ title } : Props) {
   const titleAndPrevNextbtnProps = { title, swiperIndex, swiperData, prevRef, nextRef };
 
   return (
-    <section>
-      <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />
+    <>
+      {title && <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />}
 
       <div className="flex justify-center pt-[16px] md:pt-[24px]">
         <div className="w-full">
@@ -55,7 +55,7 @@ function ArticleSwiper({ title } : Props) {
                 <ArticleCard
                   data={{
                     category: ['뉴닉', '경제'],
-                    title: `이스라엘-팔레스타인 하마스 전쟁 (${idx}) : 지상편과 휴전`,
+                    title: `이스라엘-팔레스타인 하마스 전쟁 (${idx + 1}) : 지상편과 휴전`,
                     src: 'https://ifh.cc/g/t5Z7ol.jpg',
                     percent: '75%',
                   }}
@@ -69,7 +69,7 @@ function ArticleSwiper({ title } : Props) {
           </DefaultSwiper>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
